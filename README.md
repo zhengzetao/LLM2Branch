@@ -2,10 +2,6 @@
 # Rethinking Large Language Model-Based Optimization for Mixed-Integer Linear Programming
 
 
-## Installation
-
-See installation instructions [here](INSTALL.md).
-
 ## Running the experiments
 
 ### Set Covering
