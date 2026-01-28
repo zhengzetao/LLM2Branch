@@ -1,4 +1,3 @@
-__Update__: check out library [Ecole](https://doc.ecole.ai), which reimplements everything you'll need for learning to branch, in a nice and clean Python package ([paper here](https://arxiv.org/abs/2011.06069)).
 
 # Rethinking Large Language Model-Based Optimization for Mixed-Integer Linear Programming
 
