@@ -1,0 +1,5 @@
+"""Copy to llm_config.py locally; never commit real credentials."""
+API_KEY = ""
+API_URL = "https://api.example.com/v1/chat/completions"
+MODEL_NAME = "your-model-name"
+LLM_PROVIDER = "default"
