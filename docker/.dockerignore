@@ -1,0 +1,7 @@
+**
+!Dockerfile
+!requirements-runtime.txt
+!verify_runtime.py
+!vanillafullstrong.patch
+!scip-6.0.1.tgz
+!soplex-4.0.1.tgz

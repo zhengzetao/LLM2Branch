@@ -74,3 +74,12 @@ Generators and parts of the solver utilities derive from [Learn2Branch](https://
 ## Release checks
 
 The release was checked in the existing SCIP server environment: CLI help, a fresh-output fixed-rule baseline run, native solves of small generated instances from all four families, and an offline mocked LLM-client/configuration check. A live API call and a clean-from-source solver installation were not performed for this release.
+
+## Docker environment
+
+A dependency-only CPU environment can be rebuilt using the [Docker guide](docker/README.md).
+Supply your own SCIP 6.0.1 and SoPlex 4.0.1 source archives under their upstream licenses;
+then run the build script described in the guide.
+Project code and datasets are mounted at runtime. API credentials, experiment outputs,
+and execution logs are not included in the build context or image.
+A prebuilt legacy SCIP image is not publicly redistributed here because of the legacy license conditions.

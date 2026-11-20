@@ -1,5 +1,10 @@
 # Installation
 
+For an isolated CPU environment, use the [Docker build guide](docker/README.md).
+The recipe builds the legacy solver from user-supplied sources, pins the custom
+binding revision, and keeps code, data, credentials and outputs outside the image.
+
+
 ## Platform and Python
 
 The server deployment uses Linux amd64, Python3.8, SCIP6.0.1, SoPlex4.0.1 and the modified ds4dm PySCIPOpt2.1.5 lineage. This legacy integration needs custom solver methods; importing a standard modern pyscipopt package alone is insufficient.
@@ -41,4 +46,4 @@ From the repository checkout:
 
 Then configure the API as described in README.md. SVMrank is optional, loaded only for explicitly configured SVMrank competitor policies.
 
-The release is checked in the existing server solver environment. A clean native build on a new machine has not been verified; the legacy dependency/custom-interface requirements remain necessary.
+The Docker recipe has been built from source on Linux amd64 and checked offline with the released CLI and tiny instances from all four problem families. The manual native-install procedure above has not been independently validated on a new machine. These checks verify installation and interfaces, not benchmark performance or live LLM API behavior.

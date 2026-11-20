@@ -26,3 +26,10 @@ venv/
 build/
 dist/
 *.egg-info/
+
+# User-supplied solver sources and local Docker exports
+/docker/vendor/
+/docker/*.tgz
+/docker/*.tar
+/docker/*.tar.gz
+/docker/*.zip
