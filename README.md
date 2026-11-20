@@ -34,6 +34,22 @@ Alternatively copy llm_config.example.py to llm_config.py and edit locally. Envi
 
 Replace cauctions with setcover, facilities or indset. Scale names are small, medium, big. The --limit argument selects the first N instances. The 06_llm-evaluate.py entry forwards to 07.
 
+## Download the benchmark instances
+
+The exact original LP snapshot (1200 files: four families, three scales, 100 instances per scale) is available in [data-v1 on GitHub Releases](https://github.com/zhengzetao/LLM2Branch/releases/tag/data-v1).
+
+Download the four family archives and SHA256SUMS to the repository root. Verify and extract:
+
+    sha256sum -c SHA256SUMS
+    tar -xzf cauctions.tar.gz
+    tar -xzf facilities.tar.gz
+    tar -xzf indset.tar.gz
+    tar -xzf setcover.tar.gz
+
+The archives restore data/instances/ with the paths expected by experiment_config.py. DATASET_README.md and instances-manifest.json in the release describe the snapshot and provide per-LP hashes. These are original LLM2Branch instances, not later RuleScheduler data. You can download only a selected family; in that case check its line from SHA256SUMS rather than expecting all four archives to be present.
+
+Use this frozen snapshot for exact instance matching. Running the generator is an alternative for new experiments; a different environment may not reproduce identical file bytes.
+
 ## Configuration and outputs
 
 - experiment_config.py: instance paths, default budget, seeds and policies. The shipped internal comparator is fixed relpscost, not an untouched SCIP-default run.
